@@ -16,7 +16,7 @@ b = phoebe.default_binary(semidetached=False, contact_binary=False)
 
 per = 26.5082709 #days
 incln = 91.65137637074137 #degrees
-#ftPE = 58482.6219577890
+#ftPE = 58482.6219577890 2400000 - (2458333 + windamuth)
 tPEbjd = 149.6219577890 #BJD  #21:04:22.85 UT
 #tPE = 21.0713833 #21:04:22.85
 #tpPE = 0.8780424 #tPE/24 hrs 0.87.... of a day

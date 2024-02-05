@@ -17,14 +17,12 @@ per = 26.5082709 #days
 incln = 91.65137637074137 #degrees
 pit = 1.65137637074137
 
+#for quicker computing only using first 7000 datapoints aka ~first 2 eclipses
 per1 = data[0:7000]
 bjd1 = bjd[0:7000]
 phase1 = phase[0:7000]
 dtr1 = dtr[0:7000]
 dtrerr1 = dtrerr[0:7000]
-
-#b.set_value('period', component='binary', value=per)
-
 
 b.add_dataset('lc', 
               times = phase1,
@@ -37,7 +35,6 @@ b.set_value('incl', component = 'binary', value = incln)
 
 b.run_compute(ntriangles = 1000, ltte = False)
 b.plot(x= 'phases', y = 'fluxes',show = True)
-
 
 
 ###

@@ -1,5 +1,3 @@
-#console 1
-
 import phoebe
 import numpy as np
 import matplotlib.pyplot as plt
@@ -35,6 +33,7 @@ b.add_dataset('lc',
               sigmas = dtrerr1)
 
 b.set_value('pblum_mode', 'dataset-scaled')
+b.set_value('incl', component = 'binary', value = incln)
 
 b.run_compute(ntriangles = 1000, ltte = False)
 b.plot(x= 'phases', y = 'fluxes',show = True)

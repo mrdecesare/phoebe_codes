@@ -365,7 +365,7 @@ b.set_value('pblum_mode', 'dataset-scaled') #covery to component coupled and mar
 
 #run the model through mcmc i think i did correctly but who tf knows
 b.add_compute('ellc')
-b.add_solver('sampler.emcee', optimizer = 'optimizer.nelder_mead')
+b.add_solver('sampler.emcee', optimizer = 'optimizer.nelder_mead') #where im gettin my erros see bel;ow
 
 b.run_solver(solver = 'emcee', optimizer = 'nelder_mead', solution = 'postmcmc')
 
@@ -380,3 +380,5 @@ b.plot(solution = 'postmcmc',style='lnprobability', burnin=50, thin=1, show=True
 b.plot(solution = 'postmcmc', style='corner', burnin=50, thin=1, show=True)
 
 
+#ValueError: 0 results found for twig: 'None', {'qualifier': 'use_server', 'solver': 'emcee', 'context': 'solver', 'check_visible': False, 'check_default': False, 'check_advanced': False, 'check_single': False}
+#i keep trying different thing with and without optimizer but just keep getting the same error

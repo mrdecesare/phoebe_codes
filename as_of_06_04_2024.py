@@ -23,6 +23,8 @@ teff = 5957
 #inphase only data path
 #first part of dan hey's code that technically is done above but we're gonna try without
 
+
+# dataset uploaded to github.com/mrdecesare/phoebe_codes/kic08445775.00.lc.data
 inphase_path = '/home/mrdecesare/Desktop/kic8445775/only_in_phase.txt'
 data = np.loadtxt(inphase_path)
 kic_path = '/home/mrdecesare/Desktop/learning phoebe/kic08445775.00.lc.data'
